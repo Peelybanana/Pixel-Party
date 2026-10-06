@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbfaf7" />
+    <title>Pixel Party — tiny games for tiny breaks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pixel Party home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>pixel party</span>
+      </a>
+      <div class="header-actions"><nav class="site-nav" aria-label="Main navigation"><a class="nav-button" href="#games">games</a><a class="nav-button" href="#shop">shop</a><a class="nav-button" href="#equip">equip</a></nav><div class="points-balance"><span>points</span><strong data-points-balance>0 pts</strong></div><div class="header-note"><span class="status-dot"></span>quick games, zero downloads</div></div>
+    </header>
+
+    <main id="top">
+      <section class="games-section" id="games" aria-labelledby="games-title">
+        <div class="section-heading"><div><p class="eyebrow">choose your flavor</p><h2 id="games-title">Pick a game</h2></div><span class="game-count">03 / games</span></div>
+        <div class="game-grid">
+          <button class="game-card minesweeper-card" data-game="minesweeper">
+            <div class="card-art minesweeper-art" aria-hidden="true"><span class="mine mine-a">✹</span><span class="mine mine-b">✹</span><span class="flag">⚑</span><span class="tile tile-1">1</span><span class="tile tile-2">2</span><span class="tile tile-3">3</span></div>
+            <div class="card-content"><div class="card-meta"><span>01</span><span>logic · 5 min</span></div><h3>Minesweeper</h3><p>Clear the grid. Trust your gut.</p><span class="play-link">Play now <b>↗</b></span></div>
+          </button>
+          <button class="game-card tetris-card" data-game="tetris">
+            <div class="card-art tetris-art" aria-hidden="true"><span class="tetromino z"></span><span class="tetromino t"></span><span class="tetromino l"></span><span class="tetromino i"></span><span class="tetromino o"></span></div>
+            <div class="card-content"><div class="card-meta"><span>02</span><span>arcade · endless</span></div><h3>Tetris</h3><p>Stack it up. Don't blink.</p><span class="play-link">Play now <b>↗</b></span></div>
+          </button>
+          <button class="game-card twenty-card" data-game="2048">
+            <div class="card-art twenty-art" aria-hidden="true"><span>2</span><span>4</span><span>8</span><span>16</span><span>32</span></div>
+            <div class="card-content"><div class="card-meta"><span>03</span><span>puzzle · 10 min</span></div><h3>2048</h3><p>One more move. Then class.</p><span class="play-link">Play now <b>↗</b></span></div>
+          </button>
+        </div>
+      </section>
+
+      <section class="shop-section" id="shop" aria-labelledby="shop-title">
+        <div class="shop-heading"><div><p class="eyebrow">spend your points</p><h2 id="shop-title">Shop</h2></div><div class="shop-balance"><span>your balance</span><strong data-points-balance>0 pts</strong></div></div>
+        <div class="collection-tabs" role="tablist" aria-label="Shop categories"><button class="collection-tab active" data-collection-tab="shop-textures" role="tab" aria-selected="true">textures</button><button class="collection-tab" data-collection-tab="shop-powerups" role="tab" aria-selected="false">power-ups</button></div>
+        <div class="collection-panel" id="shop-textures" role="tabpanel"><div class="shop-item"><div class="texture-preview galaxy-preview" aria-hidden="true"><span>✦</span><i></i><b></b></div><div class="shop-item-copy"><p class="shop-item-kicker">texture pack · 01</p><h3>Galaxy</h3><p>A deep-space palette for every quick game.</p></div><div class="shop-item-action"><strong>2,000 pts</strong><button class="game-action" id="galaxy-buy">buy texture pack</button></div></div></div>
+        <div class="collection-panel" id="shop-powerups" role="tabpanel" hidden><div class="shop-item"><div class="powerup-preview"><img src="assets/blockomb.png" alt="Pixel art bomb" /></div><div class="shop-item-copy"><p class="shop-item-kicker">power-up · unlimited stock</p><h3>Blockomb</h3><p>Destroy your current falling piece and pull in the next one.</p></div><div class="shop-item-action"><strong>200 pts each</strong><button class="game-action" id="blockomb-buy">buy blockomb</button></div></div></div>
+      </section>
+
+      <section class="equip-section" id="equip" aria-labelledby="equip-title">
+        <div class="shop-heading"><div><p class="eyebrow">make it yours</p><h2 id="equip-title">Equip</h2></div><span class="game-count">textures</span></div>
+        <div class="collection-tabs" role="tablist" aria-label="Equip categories"><button class="collection-tab active" data-collection-tab="equip-textures" role="tab" aria-selected="true">textures</button><button class="collection-tab" data-collection-tab="equip-powerups" role="tab" aria-selected="false">power-ups</button></div>
+        <div class="collection-panel" id="equip-textures" role="tabpanel"><div class="equip-layout"><div id="texture-loadout" class="texture-loadout"></div><div class="theme-preview-panel" id="theme-preview-panel"></div></div></div>
+        <div class="collection-panel" id="equip-powerups" role="tabpanel" hidden><div id="powerup-loadout" class="powerup-loadout"></div></div>
+      </section>
+
+      <section class="hero hero-after-games" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">a little break goes a long way <span>✦</span></p>
+          <h1 id="hero-title">Your next<br /><em>tiny</em> adventure.</h1>
+          <p class="hero-intro">Three classic games, ready when you are. No sign-ups, no waiting — just pick a game and play a round.</p>
+          <div class="hero-tip"><span class="tip-icon">↗</span><span>Best played in short bursts<br /><small>Close anytime. Your score stays here.</small></span></div>
+        </div>
+        <div class="hero-art" aria-label="Pixel art collage of retro game controllers" role="img">
+          <img class="hero-image" src="assets/retro-game-controllers.png" alt="Pixel art collage of four retro game controllers" />
+        </div>
+      </section>
+    </main>
+
+    <footer><span>© 2024 pixel party</span><span>made for micro-moments <i>●</i></span></footer>
+
+    <div class="game-modal" id="game-modal" aria-hidden="true">
+      <div class="modal-shell"><div class="modal-bar"><button class="back-button" id="close-game">← <span>back to games</span></button><div class="modal-brand">pixel party <span>•</span> <strong id="modal-game-name">game</strong></div><div class="key-hint">esc to close</div></div><div id="game-mount"></div></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
